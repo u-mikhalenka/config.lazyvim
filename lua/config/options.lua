@@ -8,3 +8,10 @@ vim.opt.title = true
 
 vim.opt.autoread = true
 vim.opt.updatetime = 1000
+
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
+
+vim.opt.scrolloff = 8
+vim.opt.colorcolumn = "100"
