@@ -16,16 +16,6 @@ local function update_terminal_title()
   vim.opt.titlestring = string.format("%s", cwd)
 end
 
-local function auto_restore_session()
-  if vim.fn.argc() > 0 then
-    return
-  end
-
-  pcall(function()
-    require("persistence").load()
-  end)
-end
-
 local title_group = vim.api.nvim_create_augroup("kolahan_terminal_title", { clear = true })
 
 vim.api.nvim_create_autocmd({ "VimEnter", "DirChanged" }, {
@@ -33,7 +23,6 @@ vim.api.nvim_create_autocmd({ "VimEnter", "DirChanged" }, {
   callback = update_terminal_title,
 })
 
-vim.schedule(auto_restore_session)
 update_terminal_title()
 
 vim.api.nvim_create_autocmd({

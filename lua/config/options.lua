@@ -15,3 +15,4 @@ vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
 
 vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "100"
+vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
