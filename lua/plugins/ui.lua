@@ -35,10 +35,8 @@ return {
       { "<leader>qS", "<cmd>AutoSession save<CR>", desc = "Save session" },
       { "<leader>qA", "<cmd>AutoSession toggle<CR>", desc = "Toggle autosave" },
     },
-    ---enables autocomplete for opts
-    ---@module "auto-session"
-    ---@type AutoSession.Config
     opts = {
+      auto_restore = true,
       git_use_branch_name = true,
       purge_after_minutes = 14400,
     },
