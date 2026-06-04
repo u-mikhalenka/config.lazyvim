@@ -28,3 +28,6 @@ vim.opt.fillchars:append({
 
 -- diffopt=internal,filler,closeoff,indent-heuristic,inline:char,linematch:40
 vim.opt.diffopt = "internal,filler,closeoff,indent-heuristic,inline:char,linematch:60,algorithm:myers,iwhite"
+
+-- enable default startup screen
+vim.opt.shortmess:remove("I")
